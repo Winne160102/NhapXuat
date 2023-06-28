@@ -1,0 +1,94 @@
+package test;
+
+import java.util.Scanner;
+
+public class People{
+		private String name;
+		private String id;
+		private String birthday;
+		private String address;
+// set từng thuộc tính	
+		public void setname(String name) {
+			this.name = name;
+		}
+		
+		public void setid(String id) {
+			this.id = id;
+		}
+		
+		public void setbirthday(String birthday) {
+			this.birthday = birthday;
+		}
+		
+		public void setaddress(String address) {
+			this.address = address;
+		}
+// set all
+		public void set(String name, String id, String birthday, String address) {
+			this.name = name;
+			this.address = address;
+			this.birthday = birthday;
+			this.id = id;
+		}
+// get từng thuộc tính
+		public String getname() {
+			return this.name;
+		}
+		
+		public String getid() {
+			return this.id;
+		}
+		
+		public String getbirthday() {
+			return this.birthday;
+		}
+		
+		public String getaddress() {
+			return this.address;
+		}
+		
+// constructor
+		public People() {}
+		
+// constructor all
+		public People (String name, String id, String birthday, String address) {
+			this.address = address;
+			this.name = name;
+			this.id = id;
+			this.birthday = birthday;
+		}
+		
+		public void nhap() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Nhap Ten: ");
+			name = sc.nextLine();
+			
+			System.out.println("Nhap ID: ");
+			id = sc.nextLine();
+			
+			System.out.println("Nhap Ngay Sinh: ");
+			birthday = sc.nextLine();
+			
+			System.out.println("Nhap Dia Chi: ");
+			address = sc.nextLine();
+			
+			sc.close();
+		}
+		public void hienthi() {
+			System.out.println("Name: " +getname());
+			System.out.println("ID: " +getid());
+			System.out.println("Birthday: " +getbirthday());
+			System.out.println("Address: " +getaddress());
+		}
+		
+		public static void main(String[] args) {
+//			People human = new People();
+//			human.nhap();
+//			human.hienthi();
+			People human = new People("võ văn mạnh tiến", "123456789", "02/04/1999", "Huế");
+			human.hienthi();
+			return;
+		}
+}
+		
